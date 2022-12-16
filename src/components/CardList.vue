@@ -1,13 +1,13 @@
 <template>
     <div class="card-list">
-        <template v-for="card in cards" :key="card.id">
+        <div class="card-list__card" v-for="card in cards" :key="card.id">
             <div class="card-list__like">like</div>
             <Card
                 :card="card"
             >
             </Card>
             <div class="card-list__dislike">dislike</div>
-        </template>
+        </div>
     </div>
 </template>
 
@@ -34,11 +34,23 @@ export default class CardList extends Vue {
 
 <style scoped lang="scss">
 .card-list {
-    &__like {
-
+    &__card {
+      display: flex;
+      justify-content: center;
     }
-    &__dislike {
 
+    &__like {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__dislike {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 }
 </style>
