@@ -23,14 +23,14 @@ export default class HomeView extends Vue {
     photos: [{ url: 'https://placeimg.com/600/300/animals' }]
   },
   {
-    id: 1,
+    id: 2,
     name: 'Средние времена',
     description: 'Самая лучшая компания',
     tags: ['finTech', 'ДМС'],
     photos: [{ url: 'https://placeimg.com/600/300/animals' }]
   },
   {
-    id: 1,
+    id: 3,
     name: 'Тяжелые времена',
     description: 'Лучше нас никого нет',
     tags: ['finTech', 'ДМС'],
