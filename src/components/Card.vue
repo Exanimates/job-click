@@ -28,9 +28,16 @@ export default class Card extends Vue {
 
 <style scoped lang="scss">
 .card {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    margin-top: 10px;
+
     &__photo {
         width: 600px;
         height: 300px;
+
+        border-radius: 5px;
     }
     &__description {
 

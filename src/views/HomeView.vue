@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
     <CardList :cards="cards"></CardList>
   </div>
 </template>
@@ -19,8 +17,22 @@ import CardList from '@/components/CardList.vue'
 export default class HomeView extends Vue {
   cards: CardItem[] = [{
     id: 1,
-    name: 'TryHard',
-    description: 'Not bad company',
+    name: 'Легкие времена',
+    description: 'Лучшая компания',
+    tags: ['finTech', 'ДМС'],
+    photos: [{ url: 'https://placeimg.com/600/300/animals' }]
+  },
+  {
+    id: 1,
+    name: 'Средние времена',
+    description: 'Самая лучшая компания',
+    tags: ['finTech', 'ДМС'],
+    photos: [{ url: 'https://placeimg.com/600/300/animals' }]
+  },
+  {
+    id: 1,
+    name: 'Тяжелые времена',
+    description: 'Лучше нас никого нет',
     tags: ['finTech', 'ДМС'],
     photos: [{ url: 'https://placeimg.com/600/300/animals' }]
   }]

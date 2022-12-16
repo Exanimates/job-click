@@ -1,12 +1,18 @@
 <template>
     <div class="card-list">
         <div class="card-list__card" v-for="card in cards" :key="card.id">
-            <div class="card-list__like">like</div>
+            <div class="card-list__like">
+              <img src="../assets/icons8-facebook-like-skin-type-2-96.png">
+              <div>Хочу здесь работать</div>
+            </div>
             <Card
                 :card="card"
             >
             </Card>
-            <div class="card-list__dislike">dislike</div>
+            <div class="card-list__dislike">
+              <img src="../assets/icons8-dislike-58.png">
+              <div>Не хочу здесь работать</div>
+            </div>
         </div>
     </div>
 </template>
@@ -44,6 +50,7 @@ export default class CardList extends Vue {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
 
     &__dislike {
@@ -51,6 +58,7 @@ export default class CardList extends Vue {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
 }
 </style>
