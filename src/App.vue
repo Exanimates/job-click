@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/">Главная</router-link> |
     <router-link to="/evaluation">Оценки</router-link> |
-    <router-link to="/about">О сайте</router-link>
+    <router-link to="/about">О сайте</router-link> |
+    <router-link to="/authorize">Вход</router-link>
   </nav>
   <router-view/>
 </template>
