@@ -4,21 +4,39 @@
         <h1>Войдите</h1>
 
         <div class="login__fields">
-            <p><input type="text" required value="Username" placeholder="Логин"></p>
+            <p><input type="text" required @input="event => handleLogin(event.target.value)" placeholder="Логин"></p>
 
-            <p><input type="password" required value="Password" placeholder="Пароль"></p>
+            <p><input type="password" required @input="event => handlePassword(event.target.value)" placeholder="Пароль"></p>
 
             <p><a href="#">Забыли пароль?</a></p>
 
-            <p><input type="submit" value="Вход"></p>
+            <p><input type="submit" value="Вход" @click="authorize"></p>
         </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue } from 'vue-class-component'
+import api from '../api/api'
 
 export default class Authorize extends Vue {
+    password = '';
+    login = '';
+
+    handlePassword (value: string) {
+      this.password = value
+    }
+
+    handleLogin (value: string) {
+      this.login = value
+    }
+
+    async authorize () {
+      const res = await api.query('accounts/login', 'POST', { username: this.login, password: this.password })
+
+      debugger
+      api.setToken(res.token)
+    }
 }
 </script>
 
